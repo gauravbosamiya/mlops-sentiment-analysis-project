@@ -62,10 +62,10 @@ def save_data(train_data,test_data,data_path):
     
 def main():
     try:
-        # params = load_params(param_path="params.yaml")
-        # test_size = params['data_ingestion']['test_size']
+        params = load_params(param_path="params.yaml")
+        test_size = params['data_ingestion']['test_size']
         
-        test_size=0.2
+        # test_size=0.2
         
         data = load_data(data_url="https://raw.githubusercontent.com/gauravbosamiya/Datasets/refs/heads/main/data.csv")
         final_data = preprocess_data(data)
