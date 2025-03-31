@@ -177,4 +177,6 @@ models/
 data/
 local_s3/
 
+# git em -r --cached 'models/model.pkl'
+
 
