@@ -19,8 +19,8 @@ class TestModelLoading(unittest.TestCase):
         os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
         dagshub_url = "https://dagshub.com"
-        repo_owner = "vikashdas770"
-        repo_name = "YT-Capstone-Project"
+        repo_owner="gauravbosamiya"
+        repo_name="mlops-sentiment-analysis-project"
 
         mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
@@ -52,7 +52,7 @@ class TestModelLoading(unittest.TestCase):
         self.assertEqual(input_df.shape[1], len(self.vectorizer.get_feature_names_out()))
 
         self.assertEqual(len(prediction), input_df.shape[0])
-        self.assertEqual(len(prediction.shape), 1)  # Assuming a single output column for binary classification
+        self.assertEqual(len(prediction.shape), 1) 
 
     def test_model_performance(self):
         X_holdout = self.holdout_data.iloc[:,0:-1]
