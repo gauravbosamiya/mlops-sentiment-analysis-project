@@ -61,9 +61,9 @@ class TestModelLoading(unittest.TestCase):
         y_pred_new = self.new_model.predict(X_holdout)
 
         accuracy_new = accuracy_score(y_holdout, y_pred_new)
-        precision_new = precision_score(y_holdout, y_pred_new)
-        recall_new = recall_score(y_holdout, y_pred_new)
-        f1_new = f1_score(y_holdout, y_pred_new)
+        precision_new = precision_score(y_holdout, y_pred_new, average="macro")
+        recall_new = recall_score(y_holdout, y_pred_new,average="macro")
+        f1_new = f1_score(y_holdout, y_pred_new, average="macro")
 
         expected_accuracy = 0.75
         expected_precision = 0.75
