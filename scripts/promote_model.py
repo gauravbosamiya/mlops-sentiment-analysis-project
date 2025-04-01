@@ -6,8 +6,8 @@ def promote_model():
     if not dagshub_token:
         return EnvironmentError("CAPSTONE_TEST envirenment variable is not set")
     
-    os.environ["MLFLOW_TRACKING_USERNAME"] - dagshub_token
-    os.environ["MLFLOW_TRACKING_PASSWORD"] - dagshub_token
+    os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+    os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
     
     dagshub_url = "https://dagshub.com"
     repo_owner = "gauravbosamiya"
